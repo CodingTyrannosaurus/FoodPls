@@ -9,9 +9,9 @@ import { BrowserRouter } from "react-router-dom";
 ReactDOM.render(<BrowserRouter><App/></BrowserRouter>, document.getElementById('root'));
 registerServiceWorker();
 
-if (module.hot) {
-  module.hot.accept('./App', () => {
-    const NextApp = require('./App').default;
-    ReactDOM.render(<BrowserRouter><NextApp/></BrowserRouter>, document.getElementById('root'));
-  })
-}
+// if (module.hot) {
+//   module.hot.accept('./App', () => {
+//     const NextApp = require('./App').default;
+//     ReactDOM.render(<BrowserRouter><NextApp/></BrowserRouter>, document.getElementById('root'));
+//   })
+// }

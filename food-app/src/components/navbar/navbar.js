@@ -1,34 +1,34 @@
 import React, { Component } from 'react';
-// import './navbar.css';
-// import { Link } from 'react-router-dom';
+import { Navbar, FormGroup, FormControl, Button, Nav, NavItem} from 'react-bootstrap';
 
-export default class NavBar extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     query: ''
-  //   };
-  //   this.handleChange = this.handleChange.bind(this);
-  //   this.handleClick = this.handleClick.bind(this);
-  // }
-  //
-  // handleChange(event){
-  //   this.setState({
-  //     query: event.target.value,
-  //   });
-  // };
-  //
-  // handleClick(event) {
-  //   event.preventDefault();
-  //   window.location = '/search/' + this.state.query.trim();
-  // };
+export default class Navigation extends Component {
 
   render() {
     return (
       <div>
-        Navbar here
+        <Navbar inverse>
+          <Navbar.Header>
+            <Navbar.Brand className="standup-brand">
+              <a href="#home">FoodPls</a>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+          </Navbar.Header>
+          <Nav>
+            <NavItem eventKey={1} href="#">
+              About
+            </NavItem>
+          </Nav>
+          <Navbar.Collapse>
+            <Navbar.Form pullRight>
+              <FormGroup>
+                <FormControl type="text" placeholder="Enter a location" />
+              </FormGroup>{' '}
+              <Button type="submit">Search</Button>
+            </Navbar.Form>
+          </Navbar.Collapse>
+        </Navbar>
       </div>
-    )
+    );
   }
 
 }
